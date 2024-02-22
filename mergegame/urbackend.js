@@ -63,6 +63,7 @@ async function fetchOpenAIResponse(prompt) {
         const data = await response.json();
         return data.choices[0].message;
     } catch (error) {
+        //e
         console.error('Error calling OpenAI API:', error);
         return null; 
     }
@@ -81,6 +82,7 @@ async function checkCollision(btn) {
     let buttons = document.querySelectorAll('button');
     for (let otherBtn of buttons) {
         if (otherBtn !== btn) {
+            //eloni
             let btnRect = btn.getBoundingClientRect();
             let otherBtnRect = otherBtn.getBoundingClientRect();
             if (btnRect.left < otherBtnRect.right && btnRect.right > otherBtnRect.left &&
@@ -90,7 +92,7 @@ async function checkCollision(btn) {
                 const responseText = await fetchOpenAIResponse(prompt);
                 otherBtn.remove();
                 collided = true;
-                btn.innerText = responseText.content;
+                btn.innerText = responseText.content;//el
                 let todive = document.getElementsByClassName("items")[0];
                 const toap = document.createElement('button');
                 toap.innerText = responseText.content;
