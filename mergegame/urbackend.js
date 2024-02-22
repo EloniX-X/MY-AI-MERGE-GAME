@@ -8,7 +8,7 @@ document.getElementById("air").addEventListener("click", function() {makeitem("a
 
 
 
-  
+//makeitemd
 function makeitem (whatto) {
     console.log("hi");
     let bodx = document.getElementsByClassName("urbody")[0];
@@ -68,10 +68,10 @@ async function fetchOpenAIResponse(prompt) {
     }
 }
 
-// Example usage
 
 let isCheckingCollision = false; 
 
+//check collisions
 async function checkCollision(btn) {
     if (isCheckingCollision) return; 
     isCheckingCollision = true; 
