@@ -1,0 +1,10 @@
+
+
+.menu {
+    background-color: grey;
+    width: 252px;
+    height: auto;
+    position: absolute;
+    left: 83%;
+    align-items: center;
+}
